@@ -1,0 +1,23 @@
+<div class="row">
+    <header class="col-sm-12 hidden-xs">
+        <h1>קטגוריה חדשה</h1>
+    </header>
+</div>
+<div class="row">
+<div class="col-sm-6 col-sm-push-3 content" ng-controller="categoryController">
+    <div ng-show="success" class="alert alert-success">הקטגוריה נוספה בהצלחה</div>
+    <form role="form" name="newCategoryForm" ng-submit="newCategoryClick()" novalidate>
+        <fieldset>
+            <legend>הכנס קטגוריה</legend>
+            <label>שם קטגוריה</label>
+
+            <div class="form-group">
+                <input type="text" name="category" class="form-control"  ng-model="newcategory.name" required>
+            </div>
+            <span class="help-block" ng-show="newCategoryForm.category.$error.required && newCategoryForm.category.$dirty">שדה זה הוא חובה</span>
+
+            <input type="submit" class="btn btn-lg btn-primary full-width" value="הוסף" ng-disabled="newCategoryForm.$invalid" />
+        </fieldset>
+    </form>
+</div>
+</div>

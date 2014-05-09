@@ -1,0 +1,55 @@
+
+<div class="row">
+    <header class="col-sm-12 hidden-xs main">
+        <h1>[[[recipie[0].name]]]</h1>
+    </header>
+</div>
+
+<div class="row">
+    <div class="col-sm-6 col-sm-push-3 content">
+            <div>
+                <p ng-bind-html="recipie[0].body"></p>
+                <p>[[[recipie[0].data]]]</p>
+            </div>
+
+            <div class="thumbnails">
+                <div ng-repeat="photo in recipie[0].photos" class="col-sm-4">
+                       <img ng-src="[[[photo.path]]]" alt="Thumbnail" class="thumbnail recipieimg" grow-on-hover width-on-leave="150px" width-on-enter="300px">
+                </div>
+            </div>
+    </div>
+</div>
+
+ <div class="row">
+    <div class="col-sm-6 col-sm-push-3">
+        <div ng-hide="$storage.isLogin()" class="alert-danger alert">עליך להיות מחובר על מנת להגיב</div>
+        <h1 ng-if="recipie[0].comments.length == 0">אין תגובות על מתכון זה</h1>
+        <div ng-if="recipie[0].comments.length > 0">
+            <h1>תגובות</h1>
+            <div ng-repeat="comment in recipie[0].comments" >
+                <h3>שם:[[[comment.name]]]</h3>
+                <span>[[[comment.created_at]]]</span>
+                <h4>תגובה:</h4>
+                <p>[[[comment.body]]]</p>
+                <input type="button" class="btn btn-danger" value="מחק" ng-show="checkUserBelongComment($index)" ng-click="deleteComment([[[comment.id]]])"/>
+                <div class="help-block" ng-show="deleted">התגובה נמחקה!</div>
+                <hr/>
+            </div>
+        </div>
+        <div ng-show="success" class="alert alert-success">התגובה נוצרה בהצלחה!</div>
+
+        <div ng-show="$storage.isLogin()" class="commentssection">
+            <h3>הוסף תגובה</h3>
+            <form name="commentForm" ng-submit="addCommentClick()" novalidate>
+
+                <label for="comment">תגובה:</label>
+                <div class="form-group">
+                    <textarea name="comment" id="comment" class="form-control" ng-model="comment.body" required></textarea>
+                </div>
+                <span class="help-block" ng-show="commentForm.comment.$error.required && commentForm.comment.$dirty">שדה זה הוא חובה</span>
+                <input type="submit" value="הגב" class="btn btn-primary btn-block" ng-disabled="commentForm.$invalid"/>
+            </form>
+        </div>
+
+  </div>
+ </div>

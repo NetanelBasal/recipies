@@ -1,0 +1,20 @@
+
+<div class="row">
+    <header class="col-sm-12 hidden-xs main">
+        <h1>המתכונים שלי</h1>
+    </header>
+</div>
+
+<div class="row">
+    <div class="col-sm-6 col-sm-push-3 content">
+        <div ng-repeat="recipie in recipies">
+            <h4>[[[recipie.name]]]</h4>
+            <span>[[[recipie.created_at]]]</span>
+            <div ng-bind-html="recipie.body"></div>
+            <input type="button" value="מחק" class="btn btn-danger" ng-click="deleteRecipie([[[recipie.id]]])" />
+            <a value="ערוך" class="btn btn-warning" ng-href="#/myrecipies/[[[userEmail]]]/[[[recipie.id]]]">ערוך</a>
+            <hr/>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,30 @@
+<div class="row">
+    <header class="col-sm-12 hidden-xs">
+        <h1>ערוך מתכון</h1>
+    </header>
+</div>
+<div class="row">
+    <div class="col-sm-6 col-sm-push-3 content">
+        <form role="form" name="editRecipieForm" ng-submit="updateRecipie(recipie.id)" novalidate>
+            <fieldset>
+                <legend>ערוך מתכון</legend>
+
+                <label>שם המתכון</label>
+                <div class="form-group">
+                    <input type="text" name="name" class="form-control" id="name" ng-model="editRecipie.name" required value="[[[recipie.name]]]" copy-to-model>
+                </div>
+                <span class="help-block" ng-show="editRecipieForm.name.$error.required && editRecipieForm.name.$dirty">שדה זה הוא חובה</span>
+
+                <div>
+                    <div text-angular value="[[[recipie.body]]]" copy-to-model ng-model="editRecipie.body" ta-toolbar="[['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'pre', 'quote'],['bold', 'italics', 'underline', 'ul', 'ol', 'redo', 'undo', 'clear'],['justifyLeft','justifyCenter','justifyRight']]" >
+                        <p ta-bind ng-model="editRecipie.body"></p>
+                    </div>
+                </div>
+
+
+                <input type="submit" class="btn btn-lg btn-primary full-width" value="עדכן מתכון" ng-disabled="editRecipieForm.$invalid" />
+            </fieldset>
+        </form>
+        <div ng-show="success" class="alert alert-success">המתכון עודכן בהצלחה!</div>
+    </div>
+</div>

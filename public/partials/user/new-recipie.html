@@ -1,0 +1,48 @@
+<div class="row">
+    <header class="col-sm-12 hidden-xs">
+        <h1>מתכון חדש</h1>
+    </header>
+</div>
+<div class="row">
+    <div class="col-sm-6 col-sm-push-3 content">
+        <form role="form" name="addRecipieForm" ng-submit="addNewRecipie()" novalidate>
+            <fieldset>
+                <legend>הכנס מתכון</legend>
+                <label>קטגוריה</label>
+
+                <div class="form-group">
+                    <select class="form-control"  ng-model="category" ng-options="category.name for category in categories track by category.id" name="category" required>
+                        <option value="">בחר קטגוריה</option>
+                    </select>
+                </div>
+                <span class="help-block" ng-show="addRecipieForm.category.$error.required && addRecipieForm.category.$dirty">שדה זה הוא חובה</span>
+
+                <label>שם המתכון</label>
+                <div class="form-group">
+                    <input type="text" name="name" class="form-control" id="name" ng-model="newRecipie.name" required>
+                </div>
+                <span class="help-block" ng-show="addRecipieForm.name.$error.required && addRecipieForm.name.$dirty">שדה זה הוא חובה</span>
+
+                <div>
+                    <div text-angular ng-model="newRecipie.body" ta-toolbar="[['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'pre', 'quote'],['bold', 'italics', 'underline', 'ul', 'ol', 'redo', 'undo', 'clear'],['justifyLeft','justifyCenter','justifyRight']]" >
+                        <p>הכנס את המתכון...לשימושך עורך טקסט... תצוגה מקדימה מתחת</p>
+                    </div>
+                </div>
+                <h2>תצוגה מקדימה:</h2>
+                <div ta-bind ng-model="newRecipie.body"></div>
+
+                <label>העלה תמונות</label>
+                <input type="file" ng-file-select="onFileSelect($files)" multiple>
+
+                <div class="progress progress-striped active">
+                    <div class="progress-bar progress-bar-info" role="progressbar"  aria-valuemin="0" aria-valuemax="100" style="width: [[[loader]]]; text-align: center;">
+                        [[[loader]]]
+                    </div>
+                </div>
+                <span class="help-block" ng-show="notAllowedFile">רק קבצי תמונה מותרים</span>
+                <input type="submit" class="btn btn-lg btn-primary full-width" value="הוסף מתכון" ng-disabled="addRecipieForm.$invalid" />
+            </fieldset>
+        </form>
+        <div ng-show="success" class="alert alert-success">המתכון נוסף בהצלחה!</div>
+    </div>
+</div>

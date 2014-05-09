@@ -1,0 +1,117 @@
+<div class="row">
+    <header class="col-sm-12 hidden-xs">
+        <h1>הפרופיל שלי</h1>
+    </header>
+</div>
+
+<div class="row">
+    <div class="col-sm-6 col-sm-push-3 content">
+
+        <!-- show profile and update profile pic -->
+
+        <div tabset>
+            <div tab heading="הפרופיל שלי" class="tabs" ng-controller="profileController">
+                <div class="col-sm-6 col-sm-push-2 content">
+                    <img ng-src="[[[$storage.profilepic()]]]" alt="profilepic" ng-show="$storage.profilepic()"/>
+                    <h3>שם: [[[$storage.userName()]]]</h3>
+                    <h3>אימייל: [[[$storage.userEmail()]]]</h3>
+                    <br>
+                    <div>
+                        <label>תמונת פרופיל</label>
+                        <input type="file" ng-file-select="onFileSelect($files)">
+                    </div>
+                    <!--<div class="progress progress-striped active">-->
+                        <!--<div class="progress-bar progress-bar-info"  role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: [[[loader]]]; text-align:center;">-->
+                            <!--[[[loader]]]-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <div class="progress progress-striped active">
+                        <div class="progress-bar progress-bar-info" role="progressbar"  aria-valuemin="0" aria-valuemax="100" style="width: [[[loader]]]; text-align: center;">
+                            [[[loader]]]
+                        </div>
+                    </div>
+                     <span class="help-block" ng-show="notAllowedFile">רק קבצי תמונה מותרים</span>
+
+                    <input type="button" value="העלה תמונה" ng-click="uploadProfilePic()" class="btn btn-success"/>
+                    <input type="button" value="מחק חשבון" class="btn btn-danger" ng-click="deleteAccount()"/>
+                </div>
+
+            </div>
+
+        <!-- update profile -->
+            <div tab heading="עדכן פרטים" class="tabs" ng-controller="profileController">
+                <form role="form" name="profileForm" class="content" ng-submit="UpdateProfileClick()" novalidate>
+                    <fieldset>
+
+                        <legend>עדכן פרטים</legend>
+
+                        <label>שם מלא</label>
+                        <div class="input-group form-group">
+                    <span class="input-group-btn">
+                        <label for="name" class="btn btn-default icons" type="button"><i class="fa fa-male"></i></label>
+                      </span>
+                            <input  type="text" class="form-control" id="name" ng-model="profileForm.name" name="name" required ng-pattern="/^[א-ת\s]*$/" ng-minlength="4">
+                        </div>
+                        <span class="help-block" ng-show="profileForm.name.$error.required && profileForm.name.$dirty">שדה זה הוא חובה</span>
+                        <span class="help-block" ng-show="profileForm.name.$error.pattern && profileForm.name.$dirty">רק אותיות בעברית מותרות</span>
+                        <span class="help-block" ng-show="profileForm.name.$error.minlength && profileForm.name.$dirty">מינימום 4 תווים</span>
+
+                        <label>אימייל</label>
+                        <div class="input-group form-group">
+                    <span class="input-group-btn">
+                        <label for="email" class="btn btn-default" type="button"><i class="fa fa-envelope"></i></label>
+                      </span>
+                            <input type="email" class="form-control" id="email" name="email" ng-model="profileForm.email" required>
+                        </div>
+                        <span class="help-block" ng-show="profileForm.email.$error.required && profileForm.email.$dirty">שדה זה הוא חובה</span>
+                        <span class="help-block" ng-show="profileForm.email.$error.email && profileForm.email.$dirty">אימייל לא חוקי</span>
+                        <input type="submit" class="btn btn-lg btn-primary full-width" value="עדכן פרטים" ng-disabled="profileForm.$invalid"/>
+                    </fieldset>
+                </form>
+                <div ng-show="successUpdateProfile" class="alert alert-success">הפרטים עודכנו בהצלחה</div>
+                <div ng-show="failedUpdateProfile" class="alert alert-danger">יש בעיה, נא נסה מאוחר יותר שוב</div>
+            </div>
+
+            <!-- update password -->
+
+            <div tab heading="עדכן סיסמא" class="tabs" ng-controller="profileController">
+                <div class="col-sm-6 col-sm-push-3">
+
+                    <form role="form" name="updatePassword" class="content"  ng-submit="updatePasswordClick()" novalidate>
+                        <fieldset>
+
+                            <legend>החלף סיסמא</legend>
+                            <label>סיסמא ישנה</label>
+                            <div class="input-group form-group">
+                                <span class="input-group-btn">
+                                    <label for="password" class="btn btn-default icons" type="button"><i class="fa fa-lock"></i></label>
+                                </span>
+                                <input type="password" class="form-control"  id="oldpassword" ng-model="update.oldpassword" name="oldpassword" required>
+                            </div>
+                            <span class="help-block" ng-show="updatePassword.oldpassword.$error.required && updatePassword.oldpassword.$dirty">שדה זה הוא חובה</span>
+
+
+                            <label>סיסמא</label>
+                            <div class="input-group form-group">
+                    <span class="input-group-btn">
+                        <label for="password" class="btn btn-default icons" type="button"><i class="fa fa-lock"></i></label>
+                      </span>
+                                <input type="password" class="form-control"  id="password" ng-model="update.password" name="password" required ng-minlength="6" data-toggle="tooltip" data-placement="top" title="השתדל לבחור סיסמא חזקה" tool-tip check-password-strength>
+                            </div>
+                            <span class="help-block" ng-show="passkeyup">חוזק סיסמא: הסיסמא תפרץ תוך <span id="info"></span></span>
+                            <span class="help-block" ng-show="updatePassword.password.$error.required && updatePassword.password.$dirty">שדה זה הוא חובה</span>
+                            <span class="help-block" ng-show="updatePassword.password.$error.minlength && updatePassword.password.$dirty">מינימום 6 תווים</span>
+
+                            <input type="submit" class="btn btn-lg btn-primary full-width" value="החלף סיסמא" ng-disabled="updatePassword.$invalid" />
+                        </fieldset>
+                    </form>
+                    <div ng-show="successUpdatePassword" class="alert alert-success">הסיסמא עודכנה בהצלחה, נא להתחבר מחדש</div>
+                    <div ng-show="failedupdatePassword" class="alert alert-danger">הסיסמא לא נכונה, נא נסה שנית</div>
+            </div>
+
+        </div>
+
+
+    </div>
+        </div>
+</div>

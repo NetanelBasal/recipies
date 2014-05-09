@@ -1,0 +1,7 @@
+<ul class="pagination">
+    <li ng-hide="isFirst()"><a ng-click="backPage()">&laquo;</a></li>
+    <li ng-repeat="page in pages" ng-class="{active: currentPage == page}">
+        <a ng-click="setPage(page)">[[[page]]]</a>
+    </li>
+    <li ng-hide="isLast() || noResults"><a ng-click="forwardPage()">&raquo;</a></li>
+</ul>

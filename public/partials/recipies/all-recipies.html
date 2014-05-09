@@ -1,0 +1,34 @@
+
+<div class="row">
+    <header class="col-sm-12 hidden-xs main">
+        <h1>רשימת מתכונים</h1>
+    </header>
+</div>
+
+
+<div class="row">
+    <div class="col-sm-6 col-sm-push-3 content">
+
+        <div class="form-group">
+            <input type="text" ng-model="key" class="form-control search" placeholder="הקש מילת מפתח..."/>
+        </div>
+
+        <div class="form-group">
+            <select class="form-control categories"  ng-model="category" ng-options="category.name for category in categories track by category.id" name="category" required>
+                <option value="">חפש על פי קטגוריה</option>
+            </select>
+        </div>
+
+        <h2 ng-show="noResults" class="alert alert-success">לא נמצאו תוצאות</h2>
+            <div ng-repeat="recipie in recipies.data">
+                <h4>[[[recipie.name]]]</h4>
+                <span>[[[recipie.created_at]]]</span>
+                <div ng-bind-html="recipie.body.substr(0,500)"></div>
+                <a ng-href="/#/recipie/[[[recipie.id]]]">המשך לקרוא</a>
+                <hr/>
+            </div>
+
+                                            <div laravel-pagination></div>
+
+    </div>
+</div>
