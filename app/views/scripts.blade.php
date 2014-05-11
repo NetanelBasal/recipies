@@ -10,37 +10,18 @@
 <script src={{asset('vendor/ps.js')}}></script>
 <script src={{asset('vendor/webstorage.min.js')}}></script>
 <script src={{asset('vendor/ui-bootstrap.min.js')}}></script>
+<script src={{asset('vendor/fancybox/jquery.fancybox.js')}}></script>
 <script src={{asset('vendor/ng-file-upload/angular-file-upload.min.js')}}></script>
 <script src={{asset('vendor/ng-file-upload/angular-file-upload-shim.min.js')}}></script>
 <script src=//ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-animate.min.js></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.2.0/textAngular-sanitize.min.js'></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.2.0/textAngular.min.js'></script>
-
+<!--<script>-->
+<!--    angular.module('recipies', []).constant('csrf_token', "{{$token}}")-->
+<!--</script>-->
 <script src={{asset('angular/app.js')}}></script>
 <script src={{asset('angular/controllers.js')}}></script>
 <script src={{asset('angular/directives.js')}}></script>
 <script src={{asset('angular/filters.js')}}></script>
 <script src={{asset('angular/services.js')}}></script>
 
-<!--<script src=/vendor/modernizr.js></script>-->
-<!--<script src=/vendor/jquery.min.js></script>-->
-<!--<script src=/vendor/bootstrap.min.js></script>-->
-<!--<script src=/vendor/responsiveslides.min.js></script>-->
-<!--<script src=/angular/utils.js></script>-->
-<!--<script src=/vendor/angular/angular.min.js></script>-->
-<!--<script src=/vendor/lodash/dist/lodash.min.js></script>-->
-<!--<script src=/vendor/angular-ui-router/release/angular-ui-router.min.js></script>-->
-<!--<script src=/vendor/restangular/dist/restangular.min.js></script>-->
-<!--<script src=/vendor/ps.js></script>-->
-<!--<script src=/vendor/webstorage.min.js></script>-->
-<!--<script src=/vendor/ui-bootstrap.min.js></script>-->
-<!--<script src=/vendor/ng-file-upload/angular-file-upload.min.js></script>-->
-<!--<script src=/vendor/ng-file-upload/angular-file-upload-shim.min.js></script>-->
-<!--<script src=/vendor/fileinputcss.js></script>-->
-<!--<script src=//ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-animate.min.js></script>-->
-<!--<script src=/angular/app.js></script>-->
-<!--<script src=/angular/controllers.js></script>-->
-<!--<script src=/angular/directives.js></script>-->
-<!--<script src=/angular/filters.js></script>-->
-<!--<script src=/angular/services.js></script>-->
-<!--<script src=/angular/recipies.min.js></script>-->

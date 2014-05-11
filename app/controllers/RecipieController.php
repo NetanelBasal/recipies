@@ -37,16 +37,20 @@ class RecipieController extends \BaseController {
                 for($i = 0; $i < count($_FILES); $i++ ) {
                     $file = $_FILES['file'. $i];
                     $name = time() . $file['name'];
-                    $save = Image::open($file['tmp_name'])
-                        ->resize('150', '150')
-                        ->save($path_to_image . DIRECTORY_SEPARATOR . $name);
-                    if($save)
+                    $saveThumbnail = Image::open($file['tmp_name'])
+                        ->forceResize('200', '150')
+                        ->save($path_to_image . DIRECTORY_SEPARATOR . 'thumbs'. DIRECTORY_SEPARATOR .  $name);
+                    $saveLarge = Image::open($file['tmp_name'])
+                        ->forceResize('400', '250')
+                        ->save($path_to_image . DIRECTORY_SEPARATOR .  $name);
+
+                    if($saveLarge)
                     {
                         $photo = New Photo;
-                        $photo->path = $path_to_show . DIRECTORY_SEPARATOR . $name;
+                        $photo->name = $name;
+                        $photo->path = $path_to_show;
                         $photo->recipie_id = $id;
-                        $photo->save();
-                        if($save) {
+                        if($photo->save()) {
                             $saved[] = 'true';
                         }else {
                             $saved[] = 'false';
@@ -56,10 +60,10 @@ class RecipieController extends \BaseController {
                 if(in_array('false' , $saved)) {
                     return Response::json(array('saved' => false));
                 } else {
-                    return Response::json(array('saved' => true));
+                    return Response::json(array('saved' => true, 'recipie_id' => $id));
                 }
             }else {
-                return Response::json(array('saved' => true));
+                return Response::json(array('saved' => true,'recipie_id' => $id));
             }
 
         }
@@ -80,10 +84,16 @@ class RecipieController extends \BaseController {
 	 */
 	public function show($id)
 	{
+        $recipie = Recipie::find($id);
+        if(count($recipie) > 0) {
+            return Recipie::with(array('photos','comments' => function($query) {
+                    $query->orderBy('created_at', 'DESC');
+                }))->where('id', '=', $id)->get();
+        } else {
+            return Response::json(array('notexits' => true));
+        }
 
-        return Recipie::with(array('photos','comments' => function($query) {
-                $query->orderBy('created_at', 'DESC');
-            }))->where('id', '=', $id)->get();
+      
 
 
     }
@@ -120,6 +130,7 @@ class RecipieController extends \BaseController {
 	{
         if(Auth::user()->id == Input::get('user_id')) {
             $recipie = Recipie::find($id);
+            File::deleteDirectory(public_path('client-images' . DIRECTORY_SEPARATOR . Auth::user()->email . DIRECTORY_SEPARATOR . 'recipies' . DIRECTORY_SEPARATOR . $recipie->id . DIRECTORY_SEPARATOR));
             $recipie->delete();
             return Response::json(array('delete' => true));
         }else{
@@ -128,7 +139,7 @@ class RecipieController extends \BaseController {
 	}
 
     public function getAllRecipies() {
-        return Recipie::paginate(1);
+        return Recipie::orderBy('created_at', 'DESC')->paginate(1);
     }
 
     public function searchRecipie() {

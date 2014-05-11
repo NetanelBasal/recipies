@@ -5,14 +5,13 @@
     </header>
 </div>
 
-<div class="row">
+<div class="row" ng-repeat="recipie in recipies" ng-class="{oddrow: $odd , evenrow:$even}">
     <div class="col-sm-6 col-sm-push-3 content">
-        <div ng-repeat="recipie in recipies">
-            <h4>[[[recipie.name]]]</h4>
-            <span>[[[recipie.created_at]]]</span>
-            <div ng-bind-html="recipie.body.substr(0,500)"></div>
-            <a ng-href="/#/recipie/[[[recipie.id]]]">המשך לקרוא</a>
-            <hr/>
+        <div>
+            <h4 class="recipie-name">[[[recipie.name]]]</h4>
+            <span class="recipie-date">[[[recipie.created_at]]]</span>
+            <div ng-bind-html="recipie.body.substr(0,500)" class="recipie-body"></div>
+            <a ng-href="/#/recipie/[[[recipie.id]]]" class="recipie-read-more"> המשך לקרוא &#8592;</a>
         </div>
     </div>
  </div>

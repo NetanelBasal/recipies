@@ -68,6 +68,7 @@ angular.module('recipies.services', [])
                 if (response.status === 401) {
                     $location.path('/login');
                 }
+
                 return response || $q.when(response);
             }
         };

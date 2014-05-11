@@ -4,7 +4,7 @@
 
 Route::get('/', function()
 {
-	return View::make('template');
+	return View::make('template')->withToken(csrf_token());
 });
 
 

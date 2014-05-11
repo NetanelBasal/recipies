@@ -10,7 +10,6 @@
             <fieldset>
                 <legend>הכנס פרטים</legend>
                 <label>אימייל</label>
-
                 <div class="input-group form-group">
                     <span class="input-group-btn">
                         <label for="email" class="btn btn-default" type="button"><i class="fa fa-envelope"></i></label>

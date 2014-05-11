@@ -7,8 +7,10 @@
     <link rel="stylesheet" href={{asset('css/responsiveslides.min.css')}} />
     <link rel="stylesheet" href={{asset('css/bootstrap3.min.css')}} />
     <link rel="stylesheet" href={{asset('css/bootstrap-rtl.min.css')}} />
+    <link rel="stylesheet" href={{asset('vendor/fancybox/jquery.fancybox.css')}} />
     <link rel="stylesheet" href={{asset('css/style.css')}} />
-    <link rel="stylesheet" href={{asset('css/animate.css')}} />
+<!--    <link rel="stylesheet" href={{asset('css/animate.css')}} />-->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css"/>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 </head>
 <body ng-cloak>
@@ -29,10 +31,10 @@
 <!-- end Slider -->
 
 <!-- main View -->
+    <input type="text" ng-hide="true" value="{{$token}}" ng-model="security.csrf_token" copy-to-model />
+<div ng-show="message" class="alert alert-warning col-sm-12 text-center">[[[message]]]</div>
     <div ui-view autoscroll="true"></div>
-<!-- end main View -->
-
-<!-- footer -->
+<!-- end main View --title-- footer -->
 
 
 <div class="row">
@@ -44,6 +46,8 @@
 
 
 @include('scripts')
+
+
 
 </body>
 </html>

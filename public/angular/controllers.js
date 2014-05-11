@@ -15,14 +15,16 @@ angular.module('recipies.controllers', [])
         }
     ])
 
-    .controller('loginController', ['$scope', 'userService','$state', function($scope,userService,$state) {
+    .controller('loginController', ['$scope', 'userService','$state', '$rootScope', function($scope,userService,$state,$rootScope) {
         var csrf = {
-            CSRF_TOKEN: $scope.csrf
+            CSRF_TOKEN: $scope.security.csrf_token
         }
+
         $scope.loginClick = function() {
 
             userService.loginUser(angular.extend($scope.login, csrf )).then(function(response) {
                 userService.saveUserDetailsToSession(response);
+                $rootScope.message = "ברוכים הבאים!";
                 $state.go('home');
             },function(response) {
                 $scope.wrongCred = (response.status == 401) ? true: "";
@@ -121,7 +123,7 @@ angular.module('recipies.controllers', [])
                 }
             })
         }
-    }]).controller('recipiesController', ['$scope', 'categoryService','$upload', 'categories', function ($scope, categoryService, $upload, categories) {
+    }]).controller('recipiesController', ['$scope', 'categoryService','$upload', 'categories', '$state', '$rootScope', function ($scope, categoryService, $upload, categories,$state,$rootScope) {
 
 
         $scope.categories = categories.data;
@@ -150,7 +152,10 @@ angular.module('recipies.controllers', [])
                     data: angular.extend($scope.newRecipie, $scope.category_id),
                    file: $scope.file
                 }).success(function(res) {
-                      if(res.saved) $scope.success = true;
+                        $rootScope.message = "המתכון נוסף בהצלחה!"
+                        $state.transitionTo('onerecipie', {recipieId: res.recipie_id }, {
+                            reload: true
+                        });
 
                     }).progress(function(evt) {
                         if($scope.file.length >= 1) {
@@ -164,8 +169,13 @@ angular.module('recipies.controllers', [])
         recipiesService.recentlyRecipies().then(function(res) {
             $scope.recipies = res;
         })
+
+
     }]).controller('onerecipieController', ['$scope','recipie', 'recipieId','commentsService','authService', '$state','$stateParams', function ($scope, recipie,recipieId,commentsService,authService,$state,$stateParams) {
         $scope.recipie = recipie.data;
+        if(recipie.data.notexits) {
+            $state.go('home');
+        }
 
         $scope.comment = {};
         $scope.comment.recipie_id = recipieId;
@@ -206,7 +216,8 @@ angular.module('recipies.controllers', [])
         $scope.categories = categories.data;
 
     }]).controller('myRecipiesController', ['$scope','myRecipies','authService','recipiesService','$state','$stateParams', function ($scope,myRecipies,authService,recipiesService,$state,$stateParams) {
-        $scope.recipies = myRecipies.data;
+
+        $scope.recipies = myRecipies;
         $scope.userEmail = authService.userEmail();
 
         $scope.deleteRecipie = function(id) {

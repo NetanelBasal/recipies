@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6084f2be-fd60-4882-bca6-70be478662e9" name="Default" comment="" />
+    <list default="true" id="6084f2be-fd60-4882-bca6-70be478662e9" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\wamp\www\matkonim\public\client-images\nesa@d.com\profile\1399542828men.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\matkonim\public\client-images\nesa@d.com\recipies\30\13994480741.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\matkonim\public\client-images\nesa@d.com\recipies\30\13994480742.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\matkonim\public\client-images\nesa@d.com\recipies\30\13994480743.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\matkonim\public\client-images\nesa@d.com\recipies\32\1399452345nosugar.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\matkonim\public\client-images\nesa@d.com\recipies\32\1399452345pasta.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\matkonim\public\client-images\nesa@d.com\recipies\32\1399452345salads.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\matkonim\public\client-images\nesa@d.com\recipies\32\1399452345soup.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\matkonim\public\client-images\nesa@d.com\recipies\33\139954749320523564_wa.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\matkonim\public\client-images\nesa@d.com\recipies\33\1399547493sinta_C.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/RecipieController.php" afterPath="$PROJECT_DIR$/app/controllers/RecipieController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/UserController.php" afterPath="$PROJECT_DIR$/app/controllers/UserController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/partials/recipies/all-recipies.html" afterPath="$PROJECT_DIR$/public/partials/recipies/all-recipies.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/angular/app.js" afterPath="$PROJECT_DIR$/public/angular/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.php" afterPath="$PROJECT_DIR$/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/angular/controllers.js" afterPath="$PROJECT_DIR$/public/angular/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/partials/user/login.php" afterPath="$PROJECT_DIR$/public/partials/user/login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/partials/recipies/main.html" afterPath="$PROJECT_DIR$/public/partials/recipies/main.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/partials/user/myrecipies.html" afterPath="$PROJECT_DIR$/public/partials/user/myrecipies.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/partials/user/onerecipie.html" afterPath="$PROJECT_DIR$/public/partials/user/onerecipie.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/scripts.blade.php" afterPath="$PROJECT_DIR$/app/views/scripts.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/angular/services.js" afterPath="$PROJECT_DIR$/public/angular/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/template.blade.php" afterPath="$PROJECT_DIR$/app/views/template.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/angular/utils.js" afterPath="$PROJECT_DIR$/public/angular/utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="matkonim.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,19 +50,93 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/angular/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="1" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="4587">
+            <state line="26" column="51" selection-start="944" selection-end="944" vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="8547">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="myrecipies.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="login.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/partials/user/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="58" selection-start="260" selection-end="260" vertical-scroll-proportion="-7.0" vertical-offset="0" max-vertical-offset="1320">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RecipieController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/RecipieController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="65" column="79" selection-start="2626" selection-end="2626" vertical-scroll-proportion="-23.0" vertical-offset="1386" max-vertical-offset="5577">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/template.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="56" selection-start="474" selection-end="474" vertical-scroll-proportion="-6.0" vertical-offset="99" max-vertical-offset="1914">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/angular/utils.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="7" selection-start="194" selection-end="194" vertical-scroll-proportion="0.27216494" vertical-offset="0" max-vertical-offset="970">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scripts.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/scripts.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="36" selection-start="798" selection-end="798" vertical-scroll-proportion="-9.0" vertical-offset="99" max-vertical-offset="1089">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/angular/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4818">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/partials/recipies/main.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="0" selection-start="117" selection-end="117" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="792">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="onerecipie.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/partials/user/onerecipie.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="66" selection-start="397" selection-end="397" vertical-scroll-proportion="-9.393939" vertical-offset="152" max-vertical-offset="2178">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myrecipies.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/partials/user/myrecipies.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="937">
+            <state line="9" column="31" selection-start="258" selection-end="258" vertical-scroll-proportion="-9.0" vertical-offset="0" max-vertical-offset="990">
               <folding />
             </state>
           </provider>
@@ -87,22 +189,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/partials/user/register.html" />
-        <option value="$PROJECT_DIR$/public/partials/user/new-recipie.html" />
-        <option value="$PROJECT_DIR$/public/partials/user/login.php" />
-        <option value="$PROJECT_DIR$/public/partials/admin/add-category.html" />
-        <option value="$PROJECT_DIR$/public/partials/user/profile.html" />
-        <option value="$PROJECT_DIR$/app/views/template.blade.php" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
-        <option value="$PROJECT_DIR$/public/partials/user/onerecipie.html" />
         <option value="$PROJECT_DIR$/app/views/navbar.blade.php" />
-        <option value="$PROJECT_DIR$/app/routes.php" />
-        <option value="$PROJECT_DIR$/public/angular/app.js" />
         <option value="$PROJECT_DIR$/public/angular/services.js" />
+        <option value="$PROJECT_DIR$/app/routes.php" />
+        <option value="$PROJECT_DIR$/app/controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/public/partials/recipies/all-recipies.html" />
+        <option value="$PROJECT_DIR$/public/partials/user/login.php" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/public/partials/recipies/main.html" />
         <option value="$PROJECT_DIR$/app/controllers/RecipieController.php" />
-        <option value="$PROJECT_DIR$/public/partials/user/editrecipie.html" />
+        <option value="$PROJECT_DIR$/public/angular/app.js" />
         <option value="$PROJECT_DIR$/public/angular/controllers.js" />
+        <option value="$PROJECT_DIR$/app/views/scripts.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/template.blade.php" />
         <option value="$PROJECT_DIR$/public/partials/user/myrecipies.html" />
+        <option value="$PROJECT_DIR$/public/partials/user/onerecipie.html" />
+        <option value="$PROJECT_DIR$/public/angular/utils.js" />
       </list>
     </option>
   </component>
@@ -234,90 +336,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="matkonim" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="matkonim" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="matkonim" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="matkonim" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recipies" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="matkonim" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="matkonim" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="matkonim" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="matkonim" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -355,24 +373,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="matkonim" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="matkonim" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -523,114 +523,114 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/partials/user/onerecipie.html">
+    <entry file="file://$PROJECT_DIR$/app/controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="58" selection-start="1288" selection-end="1288" vertical-scroll-proportion="-15.0" vertical-offset="594" max-vertical-offset="1980">
+        <state line="8" column="92" selection-start="259" selection-end="259" vertical-scroll-proportion="-2.7857144" vertical-offset="2838" max-vertical-offset="3894" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/filters.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="74" selection-start="1011" selection-end="1011" vertical-scroll-proportion="-0.31696904" vertical-offset="1221" max-vertical-offset="2904">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/navbar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="38" selection-start="1537" selection-end="1537" vertical-scroll-proportion="-19.0" vertical-offset="198" max-vertical-offset="1485">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/partials/recipies/all-recipies.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="9" selection-start="738" selection-end="1064" vertical-scroll-proportion="0.5714286" vertical-offset="198" max-vertical-offset="1287">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/CommentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="4" selection-start="514" selection-end="783" vertical-scroll-proportion="0.43649948" vertical-offset="350" max-vertical-offset="1287">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/angular/directives.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-4.082474" vertical-offset="3960" max-vertical-offset="5709">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/partials/user/new-recipie.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="29" selection-start="1694" selection-end="1694" vertical-scroll-proportion="0.78571427" vertical-offset="297" max-vertical-offset="1782">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="4" selection-start="1079" selection-end="1489" vertical-scroll-proportion="0.39285713" vertical-offset="1287" max-vertical-offset="3894">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="74" selection-start="553" selection-end="553" vertical-scroll-proportion="0.43649948" vertical-offset="185" max-vertical-offset="1122">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/angular/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="226" column="166" selection-start="8340" selection-end="8340" vertical-scroll-proportion="0.3448276" vertical-offset="7128" max-vertical-offset="8184">
+        <state line="15" column="171" selection-start="1003" selection-end="1003" vertical-scroll-proportion="-7.0" vertical-offset="264" max-vertical-offset="1485">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/angular/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="170" column="39" selection-start="5304" selection-end="5304" vertical-scroll-proportion="0.76185566" vertical-offset="4871" max-vertical-offset="6402">
+        <state line="68" column="39" selection-start="2185" selection-end="2185" vertical-scroll-proportion="0.0" vertical-offset="1881" max-vertical-offset="6435">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/RecipieController.php">
+    <entry file="file://$PROJECT_DIR$/public/partials/recipies/all-recipies.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="0" selection-start="2975" selection-end="2975" vertical-scroll-proportion="3.5" vertical-offset="0" max-vertical-offset="5214">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/partials/user/editrecipie.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="43" selection-start="340" selection-end="340" vertical-scroll-proportion="0.32142857" vertical-offset="0" max-vertical-offset="1188">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/angular/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="28" selection-start="1719" selection-end="1729" vertical-scroll-proportion="0.14948453" vertical-offset="1802" max-vertical-offset="4257">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/partials/recipies/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="508" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="937">
+        <state line="23" column="1" selection-start="668" selection-end="668" vertical-scroll-proportion="-15.0" vertical-offset="264" max-vertical-offset="1452">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="1" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4587">
+        <state line="219" column="0" selection-start="3014" selection-end="3014" vertical-scroll-proportion="0.0" vertical-offset="6455" max-vertical-offset="7425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/partials/user/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="58" selection-start="260" selection-end="260" vertical-scroll-proportion="-7.0" vertical-offset="0" max-vertical-offset="1320">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/angular/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4818">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/angular/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="51" selection-start="944" selection-end="944" vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="8547">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/partials/recipies/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="117" selection-end="117" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="792">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/scripts.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="36" selection-start="798" selection-end="798" vertical-scroll-proportion="-9.0" vertical-offset="99" max-vertical-offset="1089">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/template.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="56" selection-start="474" selection-end="474" vertical-scroll-proportion="-6.0" vertical-offset="99" max-vertical-offset="1914">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/RecipieController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="79" selection-start="2626" selection-end="2626" vertical-scroll-proportion="-23.0" vertical-offset="1386" max-vertical-offset="5577">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/partials/user/myrecipies.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="937">
+        <state line="9" column="31" selection-start="258" selection-end="258" vertical-scroll-proportion="-9.0" vertical-offset="0" max-vertical-offset="990">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/partials/user/onerecipie.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="66" selection-start="397" selection-end="397" vertical-scroll-proportion="-9.393939" vertical-offset="152" max-vertical-offset="2178">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/angular/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="7" selection-start="194" selection-end="194" vertical-scroll-proportion="0.27216494" vertical-offset="0" max-vertical-offset="970">
           <folding />
         </state>
       </provider>

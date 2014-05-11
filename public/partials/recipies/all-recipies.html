@@ -18,17 +18,21 @@
                 <option value="">חפש על פי קטגוריה</option>
             </select>
         </div>
+     </div>
+</div>
 
-        <h2 ng-show="noResults" class="alert alert-success">לא נמצאו תוצאות</h2>
-            <div ng-repeat="recipie in recipies.data">
-                <h4>[[[recipie.name]]]</h4>
-                <span>[[[recipie.created_at]]]</span>
-                <div ng-bind-html="recipie.body.substr(0,500)"></div>
-                <a ng-href="/#/recipie/[[[recipie.id]]]">המשך לקרוא</a>
-                <hr/>
-            </div>
-
-                                            <div laravel-pagination></div>
-
+ <h2 ng-show="noResults" class="alert alert-success">לא נמצאו תוצאות</h2>
+<div class="row" ng-repeat="recipie in recipies.data" ng-class="{oddrow: $odd , evenrow:$even}">
+    <div class="col-sm-6 col-sm-push-3 content">
+        <div>
+            <h4>[[[recipie.name]]]</h4>
+            <span>[[[recipie.created_at]]]</span>
+            <div ng-bind-html="recipie.body.substr(0,500)"></div>
+            <a ng-href="/#/recipie/[[[recipie.id]]]">המשך לקרוא</a>
+        </div>
     </div>
 </div>
+        <div class="row col-sm-6 col-sm-push-3">
+            <div laravel-pagination></div>
+        </div>
+

@@ -4,16 +4,20 @@
         <h1>המתכונים שלי</h1>
     </header>
 </div>
-
-<div class="row">
     <div class="col-sm-6 col-sm-push-3 content">
-        <div ng-repeat="recipie in recipies">
+     <div ng-hide="recipies">
+        <h1>אין לך מתכונים</h1>
+         <a ui-sref="newrecipie">צור מתכון</a>
+     </div>
+    <div>
+<div class="row" ng-repeat="recipie in recipies" ng-class="{oddrow: $odd , evenrow:$even}">
+    <div class="col-sm-6 col-sm-push-3 content">
+        <div class="clearfix">
             <h4>[[[recipie.name]]]</h4>
             <span>[[[recipie.created_at]]]</span>
             <div ng-bind-html="recipie.body"></div>
             <input type="button" value="מחק" class="btn btn-danger" ng-click="deleteRecipie([[[recipie.id]]])" />
             <a value="ערוך" class="btn btn-warning" ng-href="#/myrecipies/[[[userEmail]]]/[[[recipie.id]]]">ערוך</a>
-            <hr/>
         </div>
     </div>
 </div>

@@ -22,33 +22,57 @@ form input.ng-valid.ng-dirty {
     color: #8b1432;
 }
 .navbar {
-   animation: navbaranimation 1s;
-   -webkit-animation:navbaranimation 1s;
-    -moz-animation:navbarvnimation 1s;
-}
+    -webkit-animation: navbaranimation 1s;
+    -moz-animation: navbaranimation 1s;
+    animation: navbaranimation 1s; }
+
 @-webkit-keyframes navbaranimation {
     from {
-        top: -100px
+        top:-100px;
     }
     to {
-        top: 20px
+        top:20px;
     }
 }
+
+
 @-moz-keyframes navbaranimation {
     from {
-        top: -100px
+        top:-100px;
     }
     to {
-        top: 20px
+        top:20px;
     }
 }
+
+@-o-keyframes navbaranimation {
+    from {
+        top:-100px;
+    }
+    to {
+        top:20px;
+    }
+}
+
+@-ms-keyframes navbaranimation {
+    from {
+        top:-100px;
+    }
+    to {
+        top:20px;
+    }
+}
+
+
 @keyframes navbaranimation {
     from {
-        top: -100px;
-    } to {
-          top: 20px;
-      }
+        top:-100px;
+    }
+    to {
+        top:20px;
+    }
 }
+
 
 header {
    background: #358CCE;
@@ -93,7 +117,8 @@ header h1 {
 
 footer {
     height:300px;
-    background: #eeeeee;
+    background: #593240;
+    padding-bottom: 40px;
 }
 
 .tabs:hover {
@@ -131,3 +156,64 @@ h2 {
 .pagination li a {
     cursor: pointer;
 }
+
+.oddrow {
+    background: #FED0DB;
+    padding-bottom: 20px;
+}
+.evenrow {
+    background: #F5F1F3;
+    padding-bottom: 20px;
+}
+
+.recipie-name {
+    font-size: 2.2em;
+    color: #2A7174;
+    font-style: oblique;
+    margin-bottom: 0.8em;
+}
+
+.recipie-date {
+    display: block;
+    margin-bottom: 1.5em;
+    color: #7E6F6F;
+    font-weight: bold;
+    text-align: left;
+}
+
+.recipie-body {
+    font-size: 1.1em;
+}
+
+.recipie-read-more {
+    display: block;
+    margin-top: 1em;
+    color: #814E83;
+    font-size: 1.1em;
+    text-decoration: underline;
+}
+
+.comment {
+    padding: 20px;
+}
+
+hr {
+    background-color: #68A6CF;
+    height: 1px;
+}
+
+.comment h4 {
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.comment p {
+    margin-bottom: 20px;
+}
+
+[name=commentForm] label {
+    display: block;
+    margin:15px 0;
+}
+
+

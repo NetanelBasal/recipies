@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 angular.module('recipies', [
     'ui.router',
     'restangular',
@@ -31,7 +29,10 @@ angular.module('recipies', [
         .state('home', {
             url: '/',
             templateUrl: "partials/recipies/main.html",
-            controller:'mainController'
+            controller:'mainController',
+            onExit: function($rootScope){
+                $rootScope.message = false;
+            }
         })
         .state('login', {
             url: '/login',
@@ -68,7 +69,10 @@ angular.module('recipies', [
                     return $stateParams.recipieId;
                 }
             },
-            controller:'onerecipieController'
+            controller:'onerecipieController',
+            onExit: function($rootScope){
+                $rootScope.message = false;
+            }
         }).state('recipies',{
             url:'/recipies',
             templateUrl:'partials/recipies/all-recipies.html',
@@ -85,12 +89,20 @@ angular.module('recipies', [
             url:'/my-recipies/:userEmail',
             templateUrl:'partials/user/myrecipies.html',
             resolve: {
-                myRecipies: function(recipiesService,authService, $stateParams) {
+                myRecipies: function(recipiesService,authService, $stateParams,$state,$q) {
+                    var defferd = $q.defer();
                     $stateParams.userEmail = authService.userEmail();
-                    return recipiesService.myRecipies($stateParams.userEmail)
+                    recipiesService.myRecipies($stateParams.userEmail).then(function(res) {
+                        defferd.resolve(res.data);
+                    },function() {
+                       defferd.reject();
+                       $state.go('login');
+                    })
+                    return defferd.promise;
                 }
             },
-            controller:'myRecipiesController'
+            controller:'myRecipiesController',
+            authenticate:true
         }).state('editmyrecipie', {
             url:'/myrecipies/:userEmail/:recipieId',
             templateUrl:'partials/user/editrecipie.html',
@@ -99,7 +111,8 @@ angular.module('recipies', [
                     return recipiesService.editShowRecipie($stateParams.recipieId, authService.userId());
                 }
             },
-            controller: 'editRecipieController'
+            controller: 'editRecipieController',
+            authenticate:true
         })
 
 }])
@@ -110,6 +123,8 @@ angular.module('recipies', [
 
         $rootScope.$on("$stateChangeStart", function(event, toState) {
 
+
+
             if (toState.admin && !authService.isAdmin()) {
                 event.preventDefault();
                 $state.go("home");
@@ -119,5 +134,7 @@ angular.module('recipies', [
                 $state.go("login");
             }
         });
+
+
     }
 ])

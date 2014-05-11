@@ -3,6 +3,12 @@ $(document).ready(function () {
         speed: 3000
     });
 
+    $(".fancybox").fancybox({
+        openEffect  : 'none',
+        closeEffect : 'none'
+    });
 
 });
+$(document).ready(function() {
 
+});

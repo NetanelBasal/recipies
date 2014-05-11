@@ -5,8 +5,8 @@ class UserController extends \BaseController {
 
 
     public function __construct() {
-//        $this->beforeFilter('csrf', array('only' => array('loginUser')));
-//        $this->beforeFilter('auth', array('only' => array('update')));
+        $this->beforeFilter('csrf', array('only' => array('loginUser')));
+        $this->beforeFilter('auth', array('except' => array('loginUser','checkIfEmailExists')));
     }
 
 

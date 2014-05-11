@@ -12,11 +12,14 @@
                 <p>[[[recipie[0].data]]]</p>
             </div>
 
-            <div class="thumbnails">
-                <div ng-repeat="photo in recipie[0].photos" class="col-sm-4">
-                       <img ng-src="[[[photo.path]]]" alt="Thumbnail" class="thumbnail recipieimg" grow-on-hover width-on-leave="150px" width-on-enter="300px">
-                </div>
+        <div class="recipie-images clearfix" style="margin: 50px 0;" >
+            <div ng-repeat="photo in recipie[0].photos" style="float: right; margin-left: 20px;">
+                <a class="fancybox" rel="gallery1" href="[[[photo.path]]]\[[[photo.name]]]" alt="[[[photo.name]]]">
+                    <img ng-src="[[[photo.path]]]\thumbs\[[[photo.name]]]" alt="[[[photo.name]]]" />
+                </a>
             </div>
+        </div>
+
     </div>
 </div>
 
@@ -26,15 +29,18 @@
         <h1 ng-if="recipie[0].comments.length == 0">אין תגובות על מתכון זה</h1>
         <div ng-if="recipie[0].comments.length > 0">
             <h1>תגובות</h1>
-            <div ng-repeat="comment in recipie[0].comments" >
-                <h3>שם:[[[comment.name]]]</h3>
-                <span>[[[comment.created_at]]]</span>
-                <h4>תגובה:</h4>
-                <p>[[[comment.body]]]</p>
-                <input type="button" class="btn btn-danger" value="מחק" ng-show="checkUserBelongComment($index)" ng-click="deleteComment([[[comment.id]]])"/>
-                <div class="help-block" ng-show="deleted">התגובה נמחקה!</div>
+            <div class="row comment" ng-repeat="comment in recipie[0].comments">
+                <div>
+                    <h3>מאת:  [[[comment.name]]]</h3>
+                    <span class="recipie-date">[[[comment.created_at]]]</span>
+                    <h4>תגובה:</h4>
+                    <p>[[[comment.body]]]</p>
+                    <input type="button" class="btn btn-danger" value="מחק" ng-show="checkUserBelongComment($index)" ng-click="deleteComment([[[comment.id]]])"/>
+                    <div class="help-block" ng-show="deleted">התגובה נמחקה!</div>
+                </div>
                 <hr/>
             </div>
+
         </div>
         <div ng-show="success" class="alert alert-success">התגובה נוצרה בהצלחה!</div>
 
