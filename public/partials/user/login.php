@@ -5,7 +5,7 @@
 </div>
 <div class="row">
     <div class="col-sm-6 col-sm-push-3 content" ng-controller="loginController">
-        <div ng-show="wrongCred" class="alert alert-danger">שם משתמש או סיסמא לא נכונים</div>
+        <div ng-show="wrongCred" class="alert alert-danger fx-rotate-clock">שם משתמש או סיסמא לא נכונים</div>
         <form role="form" name="loginForm" ng-submit="loginClick()" novalidate>
             <fieldset>
                 <legend>הכנס פרטים</legend>

@@ -6,6 +6,7 @@ angular.module('recipies', [
     'webStorageModule',
     'angularFileUpload',
     'ngAnimate',
+    'fx.animations',
     'recipies.filters',
     'textAngular',
     'recipies.services',

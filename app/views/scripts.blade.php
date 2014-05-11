@@ -13,7 +13,11 @@
 <script src={{asset('vendor/fancybox/jquery.fancybox.js')}}></script>
 <script src={{asset('vendor/ng-file-upload/angular-file-upload.min.js')}}></script>
 <script src={{asset('vendor/ng-file-upload/angular-file-upload-shim.min.js')}}></script>
-<script src=//ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-animate.min.js></script>
+<script src={{asset('vendor/angular-animate.min.js')}}></script>
+
+<script src={{asset('vendor/gsap/src/minified/TweenMax.min.js')}}></script>
+<script src={{asset('vendor/ng-Fx/dist/ng-Fx.js')}}></script>
+
 <script src='http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.2.0/textAngular-sanitize.min.js'></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.2.0/textAngular.min.js'></script>
 <!--<script>-->
